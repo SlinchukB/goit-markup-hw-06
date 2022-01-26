@@ -439,6 +439,10 @@ body {
   margin-bottom: 9px;
 }
 
+.footer-cont-item:last-child {
+  margin-right: auto;
+}
+
 .footer-cont-item:not(:last-child) {
   margin-right: 70px;
 }
@@ -470,9 +474,16 @@ body {
   align-items: center;
   color: var(--third-back-color);
   font-size: 16px;
+  margin-right: 12px;
+  transition: fill var(--transition);
 }
 
-.footer-input-list {
+.footer-input:hover,
+.footer-input:focus {
+  border: 1px solid var(--second-color);
+}
+
+.footer-input-form {
   display: flex;
   justify-content: center;
 }
@@ -667,7 +678,11 @@ body {
   margin-bottom: 12px;
 }
 
-.form-field {
+.form-wrapper {
+  margin-bottom: 20px;
+}
+
+.form-field:not(:last-child) {
   margin-bottom: 10px;
 }
 
@@ -695,10 +710,12 @@ body {
   transition: fill var(--transition);
 }
 
+.form-input:hover,
 .form-input:focus {
   border: 1px solid var(--second-color);
 }
 
+.form-input:hover,
 .form-input:focus + .input-icon {
   fill: var(--second-color);
 }
@@ -714,6 +731,10 @@ body {
   margin-bottom: 4px;
 }
 
+.form-policy {
+  margin-bottom: 30px;
+}
+
 .form-text {
   width: 100%;
   height: 120px;
@@ -725,6 +746,7 @@ body {
   cursor: pointer;
 }
 
+.form-text:hover,
 .form-text:focus {
   border: 1px solid var(--second-color);
 }
@@ -745,17 +767,40 @@ body {
   border: 2px solid var(--main-color);
   border-radius: 2px;
   margin-right: 7px;
+  cursor: pointer;
+}
+
+.policy-check:hover + .check-text::before,
+.policy-check:focus + .check-text::before {
+  border: 2px solid var(--second-color);
 }
 
 .policy-check:checked + .check-text::before {
-  border: none;
+  border: 2px solid var(--second-color);
   background-image: url(../images/check.svg);
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
+  background-color: var(--second-color);
+}
+
+.privat-policy-rule::after {
+  content: "";
+  width: 100%;
+  height: 1px;
+  border-radius: 2px;
+  position: absolute;
+  background-color: var(--second-color);
+  left: 0;
+  bottom: 5px;
 }
 
 .privat-policy-rule {
   color: var(--second-color);
   line-height: 2;
+  position: relative;
+}
+
+.modal-btm {
+  padding: 10px 55px;
 }
