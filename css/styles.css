@@ -481,6 +481,7 @@ body {
 .footer-input:hover,
 .footer-input:focus {
   border: 1px solid var(--second-color);
+  outline: none;
 }
 
 .footer-input-form {
@@ -494,11 +495,6 @@ body {
 
 .footer-input::placeholder {
   color: var(--footer-color);
-}
-
-.hero-btm-send {
-  display: flex;
-  justify-content: center;
 }
 
 .btm-send {
@@ -695,6 +691,7 @@ body {
   left: 12px;
   top: 50%;
   transform: translateY(-50%);
+  transition: fill var(--transition);
 }
 
 .form-input {
@@ -707,7 +704,7 @@ body {
   cursor: pointer;
   color: var(--modal-input-text-color);
   font-size: 16px;
-  transition: fill var(--transition);
+  transition: border var(--transition);
 }
 
 .form-input:hover,
@@ -715,7 +712,7 @@ body {
   border: 1px solid var(--second-color);
 }
 
-.form-input:hover,
+.form-input:hover + .input-icon,
 .form-input:focus + .input-icon {
   fill: var(--second-color);
 }
@@ -744,6 +741,7 @@ body {
   resize: none;
   outline: none;
   cursor: pointer;
+  transition: border var(--transition);
 }
 
 .form-text:hover,
@@ -758,6 +756,7 @@ body {
 .check-text {
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 .check-text::before {
