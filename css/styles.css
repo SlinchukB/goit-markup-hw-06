@@ -439,9 +439,9 @@ body {
   margin-bottom: 9px;
 }
 
-.footer-cont-item:last-child {
+/* .footer-cont-item:last-child {
   margin-right: auto;
-}
+} */
 
 .footer-cont-item:not(:last-child) {
   margin-right: 70px;
